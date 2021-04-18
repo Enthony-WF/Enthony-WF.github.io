@@ -1,38 +1,46 @@
 <!doctype html>
 <html>
 <head>
- <title>Puzzle World</title>
+<title>Puzzle World</title>
 </head>
 <body>
-  <h1 style="background-color: Moccasin;color:#fefdff;text-align: center;line-height: 200px;"> Welcome to Puzzle World.</h1>
+  <h1 style="background-color: Moccasin;color:#fefdff;text-align: center;line-height: 200px;"> Welcome to Puzzle World</h1>
   <h1 style="text-align: center;line-height: 200px;">
-  <p id="demo">Then you can choose one math problem.<p>
-  <button onclick="math()"> 1 </button>
-  <button onclick="math2()"> 2 </button>
-  <script>
-  function math(){
-   var response = prompt("1+1=?");
-   if (response < 2){
-   alert("Try again!");
-  }else if (response > 2){
-  alert("Try again!");
-  }else{
-  alert("Bingo!");
-  }
-  }
-  math();
+  <p id="demo">Then you can choose one math problem<p>
+  <button onclick="puzzle()"> 1 </button>
+  <button onclick="puzzle2()"> 2 </button><br>
+  <button onclick="why()"> Answer of Puzzle 1</button><br>
+  <button onclick="why2()"> Answer of Puzzle 2 </button>
 
-  function math2(){
-   var response = prompt("10*10=?");
-   if (response < 100){
-   alert("Try again!");
-  }else if (response > 100){
-  alert("Try again!");
-  }else{
+
+<script>
+
+   function why(){
+   alert("Because cow calls are Mooo~vies"); }
+   function why2(){
+   alert("Long time no sea"); }
+
+  function puzzle(){
+   var response = prompt("Where do cows go on dates?");
+   if (response === "Movie"){
+   alert("Bingo!");
+  }else if (response === "movie"){
   alert("Bingo!");
+  }else{
+  alert("Try again!");
   }
   }
-  math2();
-  </script>
-</body>
-</html>
+  puzzle();
+
+  function puzzle2(){
+   var response = prompt("What did the beach say as the tide came in?");
+   if (response === "Long time no sea"){
+   alert("Bingo!");
+  }else if (response === "long time no sea"){
+  alert("Bingo!");
+  }else{
+  alert("Try again!");
+  }
+  }
+  puzzle2();
+</script>
